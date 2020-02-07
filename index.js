@@ -55,7 +55,7 @@ XlrTranslatorModule.prototype.handleMissingTranslationMessageFiles = function (m
  */
 XlrTranslatorModule.prototype.startTranslating = function (done) {
 
-    const messageOutputFileDir = `${appRoot}${translatorConfig.outputPath}/messages`;
+    const messageOutputFileDir = `${appRoot}${translatorConfig.outputPath}/`;
     async.waterfall([
 
         (callback) => {
