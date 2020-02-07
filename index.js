@@ -135,24 +135,6 @@ XlrTranslatorModule.prototype.validateFilesAndPrepareBeforeProcessing = function
                         callback(err);
                     });
                 },
-                (callback) => {
-                    // check if message directory is present
-                    xlfFileProcessor.dirExistOrCreate(`${appRoot}${translatorConfig.outputPath}/messages`, (err) => {
-                        callback(err);
-                    });
-                },
-                (callback) => {
-                    // check if translations directory is present
-                    xlfFileProcessor.dirExistOrCreate(`${appRoot}${translatorConfig.outputPath}/translations`, (err) => {
-                        callback(err);
-                    });
-                },
-                (callback) => {
-                    // check if translations directory is present
-                    xlfFileProcessor.dirExistOrCreate(`${appRoot}${translatorConfig.outputPath}/translations/csv`, (err) => {
-                        callback(err);
-                    });
-                }
             ], (err) => {
                 callback(err);
             })
